@@ -73,8 +73,9 @@ namespace TechJobsConsole
             foreach (Dictionary<string, string> row in AllJobs)
             {
                 string aValue = row[column];
+                bool container = aValue.IndexOf(value, System.StringComparison.OrdinalIgnoreCase) >= 0;
 
-                if (aValue.Contains(value))
+                if (container)
                 {
                     jobs.Add(row);
                 }

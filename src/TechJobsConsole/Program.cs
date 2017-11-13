@@ -80,6 +80,14 @@ namespace TechJobsConsole
                     {
                         searchResults = JobData.FindByColumnAndValue(columnChoice, searchTerm);
                         PrintJobs(searchResults);
+                        Console.WriteLine("");
+                        if (searchResults.Count == 0)
+
+                        {
+
+                            Console.WriteLine("No Data Found");
+
+                        }
                     }
                 }
             }
